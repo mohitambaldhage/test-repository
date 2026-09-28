@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Sentinel – Vulnerability Management</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <nav aria-label="Primary" id="nav">
+            <h1>🛡️ Sentinel</h1>
+        </nav>
+        <div class="wrap">
+            <header role="search">
+                <input id="gs" type="search" placeholder="Search vulnerabilities, CVEs, repos…" aria-label="Global search">
+                <button id="gmic" aria-label="Voice search" data-a="mic" data-v="search">🎤</button>
+                <button data-a="term" aria-label="Toggle terminal (Ctrl+`)">&gt;_</button>
+            </header>
+            <div class="vbar" id="vbar" role="status" aria-live="polite"></div>
+            <main id="main" tabindex="-1"></main>
+        </div>
+        <aside class="term" id="term" aria-label="Terminal">
+            <div class="tout" id="tout" role="log" aria-live="polite"></div>
+            <form class="tin" id="tform">
+                <span aria-hidden="true">$</span>
+                <input id="tin" aria-label="Terminal command" autocomplete="off" placeholder="type 'help'">
+            </form>
+        </aside>
+    </div>
+    <div id="toast" role="status"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
